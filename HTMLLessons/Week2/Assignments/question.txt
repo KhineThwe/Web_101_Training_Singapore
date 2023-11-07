@@ -1,0 +1,29 @@
+Exercise 1:
+Create a form that asks for the user's name, email address, and a submit button.
+
+Exercise 2:
+Create a form that asks the user to select their favorite programming language from a dropdown menu and submit the form.
+
+Exercise 3:
+Create a form that asks the user to rate a product on a scale of 1 to 5 using radio buttons and submit the form.
+
+Exercise 4:
+Create a form that asks the user to select multiple options from a checkbox list and submit the form.
+
+Exercise 5:
+Create a form that asks the user to enter their date of birth using a date picker and submit the form.
+
+Exercise 6:
+Create a form that asks the user to provide feedback about a product using a textarea and submit the form.
+
+Exercise 7:
+Create a form that asks the user to enter their credit card information (card number, expiration date, and CVV) and submit the form.
+
+Exercise 8:
+Create a form that asks the user to upload a file and submit the form.
+
+Exercise 9:
+Create a form that asks the user to select their gender from a set of radio buttons and submit the form.
+
+Exercise 10:
+Create a form that asks the user to enter their password and confirm it by re-entering it, and submit the form.

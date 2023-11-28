@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecting HTML Elements</title>
+    <link rel="stylesheet" href="./selecting.css" />
+  </head>
+  <body>
+    <h1>Elements Selectors</h1>
+    <ul>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+    </ul>
+
+    <h1>Id Selector</h1>
+    <p id="para1">Hello 1</p>
+    <p>Hello 2</p>
+    <p>Hello 3</p>
+
+    <ul id="nav">
+      <li id="key-nav"><a href="#">HTML Courses</a></li>
+      <li><a href="#">Java Courses</a></li>
+      <li><a href="#">Python Courses</a></li>
+      <li><a href="#">C# Courses</a></li>
+    </ul>
+    <ul id="nav1">
+      <li><a href="#">JS Courses</a></li>
+      <li><a href="#">Node.JS Courses</a></li>
+      <li><a href="#">C Courses</a></li>
+      <li><a href="#">C++ Courses</a></li>
+    </ul>
+
+    <h1>Class Selector</h1>
+    <p class="center">Red and center-aligned paragraph.</p>
+    <p class="center large">Red and center-aligned paragraph.Large</p>
+
+    <h1>Universal Selector *</h1>
+
+    <h1>Grouping Selector</h1>
+
+    <h1>Descendant Selector</h1>
+    <div>
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section><p>Paragraph 3 in the div.</p></section>
+    </div>
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+
+    <h1>Child Selector</h1>
+    <div>
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <!-- not Child but Descendant -->
+        <p>Paragraph 3 in the div (inside a section element).</p>
+      </section>
+      <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p>
+  </body>
+</html>

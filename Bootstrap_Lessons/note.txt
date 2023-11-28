@@ -1,0 +1,45 @@
+1.pintrest
+https://www.pinterest.com/search/pins/?q=website&rs=typed
+2.colorlib
+https://colorlib.com/
+//we can download free source code 
+3.dirbbble.com
+https://dribbble.com/shots/23106085-Fisery-Fisheries-Dashboard
+4.https://startbootstrap.com/themes/portfolio-resume
+5.https://themewagon.com/themes/villa-agency/
+
+Why should we use bootstrap?
+===========================================
+-bootstrap version 5.3 November 27,2023
+https://getbootstrap.com/
+-a kind of framework 
+-HTML + CSS + JS
+-should learn how to use
+-can customize => SASS
+
+Requirements  InstallationFor Window Users
+================================================
+1.Editor (VS Code,Sublime Text,Atom.....)
+2.Browser (Firefox,Chrome,.......)
+Recommend Browser Chrome
+3.NodeJS installation (npm -> Node Package Manager)
+(Install only left-hand side version)
+https://nodejs.org/en
+install and check in cmd prompt 
+(npm --version)
+https://nodejs.org/en
+4.Git Bash (Only for window users)
+
+Three ways to use Bootstap 
+===================================
+1.CDN (like font-awesome)
+2.download
+https://getbootstrap.com/docs/5.3/getting-started/download/
+//we can link bootstrap.min.css or bootstrap
+//less use
+3.npm
+(npm Recommend for modern projects)
+and run with live server in vscode
+cmd -> npm i bootstrap or npm i bootstrap@5.3.2 
+for font-awesome -> npm i font-awesome
+

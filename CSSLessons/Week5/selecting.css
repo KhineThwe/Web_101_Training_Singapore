@@ -1,0 +1,57 @@
+* {
+  font-size: 24px;
+}
+body {
+  background: black;
+  color: white;
+}
+h1 {
+  font-size: 24px;
+}
+ul.a {
+  list-style-type: circle;
+}
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+#para1 {
+  color: red;
+  text-align: center;
+}
+#nav {
+  background-color: pink;
+}
+
+#nav1 {
+  background-color: blue;
+}
+
+#key-nav {
+  color: red;
+  background-color: yellowgreen;
+}
+.center {
+  text-align: center;
+  color: red;
+}
+
+p.large {
+  color: white;
+  font-size: 300px;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+div p {
+  background-color: purple;
+}
+
+div > p {
+  background-color: yellow;
+}

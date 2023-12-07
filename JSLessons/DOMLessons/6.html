@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select your theme</title>
+    <style>
+      /* Define styles for the different themes */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+
+      body.dark-theme {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="theme">Select Your Theme</label>
+    <select id="theme">
+      <option value="white">White</option>
+      <option value="dark">Dark</option>
+    </select>
+
+    <script>
+      const themeDropDown = document.getElementById("theme");
+      themeDropDown.addEventListener("change", function () {
+        const selectedTheme = themeDropDown.value; //white , dark
+        //dark
+        //white
+        if (selectedTheme === "dark") {
+          document.body.classList.add("dark-theme");
+        } else {
+          document.body.classList.remove("dark-theme");
+        }
+      });
+    </script>
+  </body>
+</html>

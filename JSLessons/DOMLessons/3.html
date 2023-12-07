@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Food</title>
+  </head>
+  <body>
+    <label for="food">Please select your Favorite Foods: </label>
+    <select id="toEat">
+      <option value="">Please select Here</option>
+      <option value="coffee">Coffee</option>
+      <option value="snack">Snack</option>
+      <option value="juice">Juice</option>
+      <option value="chicken">Chicken</option>
+    </select>
+    <label for="count">Number: </label>
+    <input
+      type="number"
+      id="count"
+      name="countNumber"
+      value="0"
+      min="1"
+      max="1000"
+    />
+    <p></p>
+    <h3></h3>
+  </body>
+  <script>
+    var select = document.querySelector("select");
+    var paragraph = document.querySelector("p");
+    var count = document.querySelector("input");
+    var number = document.querySelector("h3");
+
+    select.addEventListener("change", foods);
+    function foods() {
+      var choice = select.value; //coffee
+      if (choice === "coffee") {
+        paragraph.textContent = "It is so cool.Coffee is good.";
+        number.textContent = "count is " + count.value;
+      } else if (choice === "snack") {
+        paragraph.textContent = "Snack will good for you.";
+        number.textContent = "count is " + count.value;
+      } else if (choice === "juice") {
+        paragraph.textContent = "Juice is so good.";
+        number.textContent = "count is " + count.value;
+      } else if (choice === "chicken") {
+        paragraph.textContent = "Chicken is super.";
+        number.textContent = "count is " + count.value;
+      } else {
+        paragraph.textContent = "Please choose something to eat or drink.";
+      }
+    }
+  </script>
+</html>

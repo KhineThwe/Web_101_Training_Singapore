@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Food</title>
+  </head>
+  <body>
+    <h3></h3>
+    <script>
+      var name = window.prompt("Enter your choice : Noodle or Coffee");
+      alert("You has chosen: " + name);
+      var item = document.querySelector("h3");
+      //nested if
+      if (name === "Noodle") {
+        var noodleType = window.prompt("normal or special");
+        if (noodleType === "normal") {
+          item.textContent = "This customer is normal";
+        } else if (noodleType === "special") {
+          item.textContent = "This customer is special";
+        } else {
+          item.textContent = "This customer is always customer";
+        }
+      } else {
+        item.textContent = "This customer is ordering coffee";
+      }
+    </script>
+  </body>
+</html>

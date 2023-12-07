@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* styles.css */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+      }
+
+      button.edit {
+        margin-right: 10px;
+      }
+
+      button.delete {
+        color: red;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      button.delete:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div id="tasks">
+        <ul id="task-list"></ul>
+        <input type="text" id="new-task" placeholder="Add a new task" />
+        <button id="add-task">Add Task</button>
+      </div>
+    </div>
+    <script>
+      // app.js
+      const taskList = document.getElementById("task-list");
+      const newTaskInput = document.getElementById("new-task");
+      const addTaskButton = document.getElementById("add-task");
+
+      // Add a new task
+      addTaskButton.addEventListener("click", addTask);
+
+      function addTask() {
+        const taskText = newTaskInput.value.trim();
+
+        if (taskText !== "") {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+              <span>${taskText}</span>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            `;
+
+          // Attach edit and delete event listeners to the buttons
+          const editButton = listItem.querySelector(".edit");
+          const deleteButton = listItem.querySelector(".delete");
+
+          editButton.addEventListener("click", editTask);
+          deleteButton.addEventListener("click", deleteTask);
+
+          taskList.appendChild(listItem);
+          newTaskInput.value = "";
+        }
+      }
+
+      // Edit a task
+      function editTask(event) {
+        const listItem = event.target.parentElement;
+        const taskText = listItem.querySelector("span").textContent;
+        const editedText = prompt("Edit the task:", taskText);
+
+        if (editedText !== null) {
+          listItem.querySelector("span").textContent = editedText;
+        }
+      }
+
+      // Delete a task
+      function deleteTask(event) {
+        const listItem = event.target.parentElement;
+        taskList.removeChild(listItem);
+      }
+    </script>
+  </body>
+</html>

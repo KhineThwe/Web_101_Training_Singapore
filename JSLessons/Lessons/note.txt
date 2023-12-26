@@ -1,0 +1,38 @@
+1.Standard Input and Standard Output
+console.log()
+2.Data Types
+Four Types of Data Types 
+-------------------------
+1.Character
+2.String
+3.Boolean
+4.Number
+---------------------------
+3.Variable
+--->Operators
+4.Control Structure
+5.Function
+6.OOP
+7.File IO
+8.Advanced ES6 Features
+9.DOM Manipulation
+10.Asynchronous JS
+8bits => 1byte
+"Hello" => String
+------------------------------
+Naming Conventions For Variable
+--------------------------
+1.Camel Case
+firstName,purchasePrice
+2.Snake Case
+first_name,purchase_price
+3.Pascal Case
+FirstName,purchasePrice
+------------------------
+Do not start with number
+eg: num1,num2
+do not----> 1num,2num
+3.space do not
+4._underscore allowed ---> eg: date_of_birth
+5.+,-,&^ --> Special Character
+

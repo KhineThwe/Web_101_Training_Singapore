@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <script>
+      var isValid = true;
+      // program for a simple calculator
+      let result;
+
+      // take the operator input
+      const operator = prompt("Enter operator (either +, -, * or /): ");
+
+      // take the operand input
+      const number1 = prompt("Enter first number: ");
+      if (isNaN(Number(number1))) {
+        alert("Please enter a numeric value only for the first number.");
+        isValid = false;
+      }
+
+      if (isValid) {
+        const number2 = prompt("Enter second number: ");
+        if (isNaN(Number(number2))) {
+          alert("Please enter a numeric value only for the second number.");
+          isValid = false;
+        }
+
+        if (isValid) {
+          switch (operator) {
+            case "+":
+              result = parseFloat(number1) + parseFloat(number2);
+              console.log(`${number1} + ${number2} = ${result}`);
+              break;
+            case "-":
+              result = parseFloat(number1) - parseFloat(number2);
+              console.log(`${number1} - ${number2} = ${result}`);
+              break;
+            case "*":
+              result = parseFloat(number1) * parseFloat(number2);
+              console.log(`${number1} * ${number2} = ${result}`);
+              break;
+            case "/":
+              result = parseFloat(number1) / parseFloat(number2);
+              console.log(`${number1} / ${number2} = ${result}`);
+              break;
+            default:
+              console.log("Invalid operator");
+              break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

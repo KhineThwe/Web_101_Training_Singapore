@@ -15,3 +15,4 @@ let bike2 = new Vehicle("Ninja","Kawasaki","88888");
 console.log(bike1.name);
 console.log(bike2.name);
 console.log(bike2.getDetails());
+//13

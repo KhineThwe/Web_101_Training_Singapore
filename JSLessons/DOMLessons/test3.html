@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+    }
+
+    #sortingContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #procedures {
+      margin-top: 20px;
+      width: 40%;
+    }
+
+    #arrayCanvasContainer {
+      width: 50%;
+    }
+  </style>
+  <title>Sort Visualization</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">Sort Visualization</h1>
+
+<div id="sortingContainer">
+  <div id="procedures"></div>
+  <div id="arrayCanvasContainer">
+    <button onclick="startSorting('ascending')">Sort Ascending</button>
+    <button onclick="startSorting('descending')">Sort Descending</button>
+    <canvas id="arrayCanvas" width="600" height="300"></canvas>
+  </div>
+</div>
+
+<div id="sortingTime"></div>
+
+<script>
+  const arraySize = 20;
+  let array = getRandomArray(arraySize);
+
+  const canvas = document.getElementById("arrayCanvas");
+  const ctx = canvas.getContext("2d");
+
+  function getRandomArray(size) {
+    return Array.from({ length: size }, () => Math.floor(Math.random() * 100) + 1);
+  }
+
+  function drawArray() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const barWidth = canvas.width / array.length;
+    array.forEach((value, index) => {
+      const barHeight = value * 3;
+      const x = index * barWidth;
+      const y = canvas.height - barHeight;
+      
+      ctx.fillStyle = "blue";
+      ctx.fillRect(x, y, barWidth - 5, barHeight);
+      
+      ctx.fillStyle = "black";
+      ctx.font = "12px Arial";
+      ctx.fillText(value, x + barWidth / 2 - 5, y - 5);
+    });
+  }
+
+  function swap(i, j) {
+    [array[i], array[j]] = [array[j], array[i]];
+    drawArray();
+    return new Promise(resolve => setTimeout(resolve, 100));
+  }
+
+  async function bubbleSort(order) {
+    const proceduresDiv = document.getElementById('procedures');
+    proceduresDiv.innerHTML = '';
+    
+    const startTime = performance.now();
+    const n = array.length;
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n - i - 1; j++) {
+        const shouldSwap = order === 'ascending' ? array[j] > array[j + 1] : array[j] < array[j + 1];
+        if (shouldSwap) {
+          await swap(j, j + 1);
+          
+          // Display the step in the procedures section
+          const stepDiv = document.createElement('div');
+          stepDiv.innerText = `Step ${i * n + j + 1}: Swap ${array[j]} and ${array[j + 1]}`;
+          proceduresDiv.appendChild(stepDiv);
+        }
+      }
+    }
+    const endTime = performance.now();
+    const sortingTime = endTime - startTime;
+    document.getElementById('sortingTime').innerText = `Sorting Time: ${sortingTime.toFixed(2)} milliseconds`;
+  }
+
+  function startSorting(order) {
+    document.getElementById('sortingTime').innerText = 'Sorting...';
+    bubbleSort(order);
+  }
+
+  drawArray();
+</script>
+
+</body>
+</html>

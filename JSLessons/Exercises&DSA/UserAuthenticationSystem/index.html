@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>User Authentication System</title>
+</head>
+<body>
+    <div id="app">
+        <div id="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="text" id="login-email" required>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div id="register-container">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required>
+
+                <label for="register-email">Email:</label>
+                <input type="text" id="register-email" required>
+
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+
+                <label for="register-phone">Phone Number:</label>
+                <input type="text" id="register-phone" required>
+
+                <button type="button" onclick="register()">Register</button>
+            </form>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li id="login-register-links">
+                    <a href="#" onclick="showLogin()">Login</a> / 
+                    <a href="#" onclick="showRegister()">Register</a>
+                </li>
+                <li id="logout-link" style="display: none;">
+                    <a href="#" onclick="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
